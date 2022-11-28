@@ -32,7 +32,7 @@ namespace AccesoDatosControlNegocio
             try
             {
                 connection.Open();
-                MySqlCommand command = new MySqlCommand(query);
+                MySqlCommand command = new MySqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
             }

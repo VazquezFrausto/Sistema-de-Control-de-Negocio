@@ -1,0 +1,6 @@
+C:\Users\Hp\source\repos\Control de Negocio\EntidadesControlNegocio\bin\Debug\EntidadesControlNegocio.dll
+C:\Users\Hp\source\repos\Control de Negocio\EntidadesControlNegocio\bin\Debug\EntidadesControlNegocio.pdb
+C:\Users\Hp\source\repos\Control de Negocio\EntidadesControlNegocio\obj\Debug\EntidadesControlNegocio.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\Control de Negocio\EntidadesControlNegocio\obj\Debug\EntidadesControlNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\Control de Negocio\EntidadesControlNegocio\obj\Debug\EntidadesControlNegocio.dll
+C:\Users\Hp\source\repos\Control de Negocio\EntidadesControlNegocio\obj\Debug\EntidadesControlNegocio.pdb
