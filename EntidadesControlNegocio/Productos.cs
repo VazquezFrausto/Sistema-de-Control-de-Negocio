@@ -2,21 +2,21 @@
 {
     public class Productos
     {
-        public Productos(int id, string nombre, string descripcion, double precio, int idMedida, int idCategoria)
+        public Productos(int id, string nombre, string descripcion, double precio, string medida, string categoria)
         {
             Id = id;
             Nombre = nombre;
             Descripcion = descripcion;
             Precio = precio;
-            IdMedida = idMedida;
-            IdCategoria = idCategoria;
+            Medida = medida;
+            Categoria = categoria;
         }
 
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
-        public int IdMedida { get; set; }
-        public int IdCategoria { get; set; }
+        public string Medida { get; set; }
+        public string Categoria { get; set; }
     }
 }

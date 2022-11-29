@@ -67,6 +67,8 @@
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="ConexionCategorias.cs" />
+    <Compile Include="ConexionMedidas.cs" />
+    <Compile Include="ConexionProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

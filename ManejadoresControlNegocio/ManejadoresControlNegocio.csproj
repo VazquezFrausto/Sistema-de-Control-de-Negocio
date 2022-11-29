@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManejadorCategorias.cs" />
+    <Compile Include="ManejadorMedidas.cs" />
+    <Compile Include="ManejadorProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

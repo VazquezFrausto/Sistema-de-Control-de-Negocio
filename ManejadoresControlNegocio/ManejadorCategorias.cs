@@ -20,6 +20,7 @@ namespace ManejadoresControlNegocio
         public void Consultar(DataGridView dgvCategorias)
         {
             dgvCategorias.DataSource = conexionCategorias.Consultar();
+            dgvCategorias.Columns[0].Visible = false;
             dgvCategorias.Columns[0].HeaderText = "ID";
             dgvCategorias.Columns[1].HeaderText = "Nombre";
             //dgvCategorias.Columns.Add(new DataGridViewButtonColumn()

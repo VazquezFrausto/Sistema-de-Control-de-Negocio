@@ -24,7 +24,7 @@ namespace AccesoDatosControlNegocio
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al guardar la categoría. {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al guardar el producto. {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -44,6 +44,22 @@ namespace AccesoDatosControlNegocio
                     listaCategorias.Add(categoria);
                 }
                 return listaCategorias;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al consultar las categorías. {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable CargarCategorias()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = $"SELECT id,nombre FROM categoria";
+                dt = conexionBD.Consultar(query).Tables[0];
+                return dt;
             }
             catch (Exception ex)
             {
