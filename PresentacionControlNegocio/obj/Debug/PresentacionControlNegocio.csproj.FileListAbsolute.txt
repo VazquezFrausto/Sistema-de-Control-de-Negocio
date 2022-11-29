@@ -34,3 +34,5 @@ C:\Users\Hp\source\repos\Control de Negocio\PresentacionControlNegocio\obj\Debug
 C:\Users\Hp\source\repos\Control de Negocio\PresentacionControlNegocio\obj\Debug\PresentacionControlNegocio.FrmSizes.resources
 C:\Users\Hp\source\repos\Control de Negocio\PresentacionControlNegocio\obj\Debug\PresentacionControlNegocio.FrmAddProduct.resources
 C:\Users\Hp\source\repos\Control de Negocio\PresentacionControlNegocio\obj\Debug\PresentacionControlNegocio.FrmSales.resources
+C:\Users\Hp\source\repos\Control de Negocio\PresentacionControlNegocio\obj\Debug\PresentacionControlNegocio.FrmMain.resources
+C:\Users\Hp\source\repos\Control de Negocio\PresentacionControlNegocio\obj\Debug\PresentacionControlNegocio.FrmProducts.resources

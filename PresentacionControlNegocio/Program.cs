@@ -16,7 +16,7 @@ namespace PresentacionControlNegocio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAddProduct());
+            Application.Run(new FrmMain());
         }
     }
 }
