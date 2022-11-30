@@ -34,5 +34,11 @@ namespace PresentacionControlNegocio
             FrmSizes frmSizes = new FrmSizes();
             frmSizes.Show();
         }
+
+        private void puntoDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSales frmSales = new FrmSales();
+            frmSales.Show();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace AccesoDatosControlNegocio
             {
                 string query = $"INSERT INTO medida VALUES(default, '{nombre}', '{abreviatura}')";
                 conexionBD.Ejecutar(query);
-                MessageBox.Show($"Guardado exitoso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Guardado exitoso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

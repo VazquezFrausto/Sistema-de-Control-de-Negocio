@@ -20,11 +20,11 @@ namespace AccesoDatosControlNegocio
             {
                 string query = $"INSERT INTO categoria VALUES(default, '{nombre}')";
                 conexionBD.Ejecutar(query);
-                MessageBox.Show($"Guardado exitoso.","Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show($"Guardado exitoso.","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al guardar el producto. {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al guardar la categoría. {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
