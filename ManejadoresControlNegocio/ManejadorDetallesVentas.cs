@@ -21,7 +21,7 @@ namespace ManejadoresControlNegocio
             string detalles = "";
             foreach (var item in conexionDetalle.Consultar(idVenta))
             {
-                detalles += $"{item.Cantidad} {item.Nombre}\t${item.Precio}\n";
+                detalles += $"{item.Cantidad} x {item.Nombre}\t${item.Precio}\n";
             }
             MessageBox.Show(detalles, $"Detalles de la venta #{idVenta}", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

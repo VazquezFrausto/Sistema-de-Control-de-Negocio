@@ -46,5 +46,11 @@ namespace PresentacionControlNegocio
             FrmSalesDetails frmSalesDetails = new FrmSalesDetails();
             frmSalesDetails.Show();
         }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmStock frmStock = new FrmStock();
+            frmStock.Show();
+        }
     }
 }

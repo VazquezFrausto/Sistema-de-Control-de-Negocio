@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionAlmacenes.cs" />
     <Compile Include="ConexionBD.cs" />
     <Compile Include="ConexionCategorias.cs" />
     <Compile Include="ConexionDetalleVentas.cs" />

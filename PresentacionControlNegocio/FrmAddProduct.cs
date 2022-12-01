@@ -28,6 +28,11 @@ namespace PresentacionControlNegocio
         void Actualizar()
         {
             manejadorProductos.CargarDatos(cmbMedida, cmbCategoria);
+            if (cmbMedida.Items.Count == 0 || cmbCategoria.Items.Count == 0)
+            {
+                MessageBox.Show("No hay categorías o medidas existentes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Close();
+            }
         }
 
         void Limpiar()

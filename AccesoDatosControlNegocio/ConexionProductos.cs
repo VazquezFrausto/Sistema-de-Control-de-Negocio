@@ -87,5 +87,21 @@ namespace AccesoDatosControlNegocio
                 return null;
             }
         }
+
+        public DataTable CargarProductos()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = $"SELECT id,nombre FROM producto";
+                dt = conexionBD.Consultar(query).Tables[0];
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al consultar los productos. {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }
