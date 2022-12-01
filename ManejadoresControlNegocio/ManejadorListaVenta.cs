@@ -3,6 +3,7 @@ using EntidadesControlNegocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ManejadoresControlNegocio
@@ -18,10 +19,10 @@ namespace ManejadoresControlNegocio
             conexionProductos= new ConexionProductos();
         }
 
-        public void ConsultarProductos(DataGridView dgvProductos)
+        public void ConsultarProductos(DataGridView dgvProductos, string buscar = null)
         {
             dgvProductos.Columns.Clear();
-            dgvProductos.DataSource = conexionProductos.Consultar();
+            dgvProductos.DataSource = conexionProductos.Consultar(buscar);
             dgvProductos.Columns[0].HeaderText = "ID";
             dgvProductos.Columns[1].HeaderText = "Nombre";
             dgvProductos.Columns[2].HeaderText = "Descripción";
@@ -45,8 +46,7 @@ namespace ManejadoresControlNegocio
                     cantidad, (Convert.ToDouble(dt.Rows[0]["precio"].ToString()) * cantidad));
                 listaVenta.Add(producto);
 
-                dgvVenta.DataSource = null;
-                dgvVenta.DataSource = listaVenta;
+                Consultar(listaVenta, dgvVenta);
 
                 int i = 0;
                 do
@@ -61,7 +61,32 @@ namespace ManejadoresControlNegocio
             {
                 MessageBox.Show($"El producto con el id: {id} no existe", "Error");
             }
-            
+        }
+
+        public void QuitarProducto(int index, List<ListaVenta> listaVenta, DataGridView dgvVenta, TextBox txtTotal)
+        {
+            double total = Convert.ToDouble(txtTotal.Text); 
+            total -= double.Parse(dgvVenta.Rows[index].Cells["Subtotal"].Value.ToString());
+            txtTotal.Text = total.ToString();
+            listaVenta.RemoveAt(index);
+            Consultar(listaVenta, dgvVenta);
+        }
+
+        public void Consultar(List<ListaVenta> listaVenta, DataGridView dgvVenta)
+        {
+            dgvVenta.DataSource = null;
+            dgvVenta.Columns.Clear();
+            dgvVenta.DataSource = listaVenta;
+
+            dgvVenta.Columns.Add(new DataGridViewButtonColumn()
+            {
+                Text = "Quitar",
+                UseColumnTextForButtonValue = true,
+                FlatStyle = FlatStyle.Flat,
+            });
+
+            dgvVenta.Columns[5].DefaultCellStyle.BackColor = Color.FromArgb(240, 0, 36);
+            dgvVenta.Columns[5].DefaultCellStyle.ForeColor = Color.White;
         }
     }
 }

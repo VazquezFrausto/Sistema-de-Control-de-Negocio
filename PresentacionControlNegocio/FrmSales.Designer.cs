@@ -74,6 +74,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(339, 26);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnCobrar
             // 
@@ -154,6 +155,7 @@
             this.dgvVenta.RowTemplate.Height = 30;
             this.dgvVenta.Size = new System.Drawing.Size(565, 286);
             this.dgvVenta.TabIndex = 10;
+            this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
             // 
             // label4
             // 
