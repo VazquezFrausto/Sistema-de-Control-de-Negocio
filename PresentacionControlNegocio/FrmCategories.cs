@@ -21,6 +21,7 @@ namespace PresentacionControlNegocio
         void Limpiar()
         {
             txtNombre.Clear();
+            txtNombre.Focus();
         }
         private void btnRegresar_Click(object sender, EventArgs e)
         {
@@ -34,9 +35,9 @@ namespace PresentacionControlNegocio
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNombre.Text))
+            if (!string.IsNullOrEmpty(txtNombre.Text.Trim()))
             {
-                manejadorCategorias.Guardar(txtNombre.Text);
+                manejadorCategorias.Guardar(txtNombre.Text.Trim());
             }
             Actualizar();
             Limpiar();
@@ -48,6 +49,11 @@ namespace PresentacionControlNegocio
             //{
             //    MessageBox.Show($"Fila: {e.RowIndex}");
             //}
+        }
+
+        private void FrmCategories_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Limpiar();
         }
     }
 }

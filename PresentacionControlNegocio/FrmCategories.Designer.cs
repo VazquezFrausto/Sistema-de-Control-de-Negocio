@@ -33,7 +33,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +42,7 @@
             this.dgvCategorias.AllowUserToAddRows = false;
             this.dgvCategorias.AllowUserToDeleteRows = false;
             this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCategorias.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Location = new System.Drawing.Point(12, 12);
             this.dgvCategorias.Name = "dgvCategorias";
@@ -91,24 +91,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.Color.Crimson;
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(425, 252);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(88, 42);
-            this.btnRegresar.TabIndex = 3;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
             // FrmCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(534, 306);
-            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvCategorias);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,6 +106,7 @@
             this.Name = "FrmCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar categoría.";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCategories_FormClosing);
             this.Load += new System.EventHandler(this.FrmCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -133,7 +122,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRegresar;
     }
 }
 

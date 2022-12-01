@@ -30,7 +30,6 @@ namespace ManejadoresControlNegocio
             dgvProductos.Columns[4].HeaderText = "Medida";
             dgvProductos.Columns[5].HeaderText = "Categoria";
             dgvProductos.Columns[2].Visible = false;
-            dgvProductos.Columns[4].Visible = false;
             dgvProductos.Columns[5].Visible = false;
         }
 

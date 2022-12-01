@@ -40,5 +40,11 @@ namespace PresentacionControlNegocio
             FrmSales frmSales = new FrmSales();
             frmSales.Show();
         }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmSalesDetails frmSalesDetails = new FrmSalesDetails();
+            frmSalesDetails.Show();
+        }
     }
 }

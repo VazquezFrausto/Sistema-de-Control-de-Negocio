@@ -76,6 +76,8 @@ namespace PresentacionControlNegocio
                         manejadorProductos.Actualizar(txtNombre.Text, txtDescripcion.Text,
                             Convert.ToDouble(txtPrecio.Text), Convert.ToInt32(cmbCategoria.SelectedValue.ToString()),
                             Convert.ToInt32(cmbMedida.SelectedValue.ToString()), id);
+                        Limpiar();
+                        Close();
                     }
                 }
             }

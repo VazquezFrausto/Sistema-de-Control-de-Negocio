@@ -41,9 +41,9 @@ namespace PresentacionControlNegocio
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(txtAbreviatura.Text) || string.IsNullOrEmpty(txtNombre.Text)))
+            if (!(string.IsNullOrEmpty(txtAbreviatura.Text.Trim()) || string.IsNullOrEmpty(txtNombre.Text.Trim())))
             {
-                manejadorMedidas.Guardar(txtNombre.Text, txtAbreviatura.Text);
+                manejadorMedidas.Guardar(txtNombre.Text.Trim(), txtAbreviatura.Text.Trim());
             }
             Limpiar();
             Actualizar();

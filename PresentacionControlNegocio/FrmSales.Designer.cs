@@ -58,6 +58,7 @@
             this.dgvProductos.RowTemplate.Height = 30;
             this.dgvProductos.Size = new System.Drawing.Size(339, 286);
             this.dgvProductos.TabIndex = 2;
+            this.dgvProductos.TabStop = false;
             // 
             // label1
             // 
@@ -73,7 +74,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(12, 42);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(339, 26);
-            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TabIndex = 5;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnCobrar
@@ -83,7 +84,7 @@
             this.btnCobrar.Location = new System.Drawing.Point(821, 389);
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(112, 44);
-            this.btnCobrar.TabIndex = 5;
+            this.btnCobrar.TabIndex = 4;
             this.btnCobrar.Text = "Cobrar";
             this.btnCobrar.UseVisualStyleBackColor = false;
             this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
@@ -102,7 +103,7 @@
             this.txtID.Location = new System.Drawing.Point(368, 42);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(133, 26);
-            this.txtID.TabIndex = 2;
+            this.txtID.TabIndex = 1;
             // 
             // btnAgregar
             // 
@@ -111,7 +112,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(853, 38);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(80, 35);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -135,12 +136,13 @@
             0});
             this.numCantidad.Name = "numCantidad";
             this.numCantidad.Size = new System.Drawing.Size(40, 26);
-            this.numCantidad.TabIndex = 3;
+            this.numCantidad.TabIndex = 2;
             this.numCantidad.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.numCantidad.Enter += new System.EventHandler(this.numCantidad_Enter);
             // 
             // dgvVenta
             // 
@@ -155,6 +157,7 @@
             this.dgvVenta.RowTemplate.Height = 30;
             this.dgvVenta.Size = new System.Drawing.Size(565, 286);
             this.dgvVenta.TabIndex = 10;
+            this.dgvVenta.TabStop = false;
             this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
             // 
             // label4
